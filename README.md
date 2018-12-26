@@ -36,6 +36,7 @@ we start by creating a Pipeline which will get triggered by any changes in maste
 1.	Create Pipeline named “Configuration_management” with all default parameters. Select Github as source and select master branch of  this forked repo.
 
 ![createpipeline](createpipeline.png?raw=true "createpipeline")
+
 ![createpipeline2](createpipeline2.png?raw=true "createpipeline2")
 
 2. if you make changes via Console, you will have to create two stages to complete the pipeline. Create a dummy build stage which can later be replaced by invoke stage.
@@ -53,6 +54,7 @@ we start by creating a Pipeline which will get triggered by any changes in maste
 1.	View the Pipeline and edit it and add one stage after source named as “Invoke-stage”. Click on Add Action Group and give the Action name as “Lambda” and Action Provider as “AWS Lambda”. Select your Lambda Function and Input Artifacts as “SourceArtifacts”.
 
 ![addstage](addstage.png?raw=true "addstage")
+
 ![configureinvokestage](configureinvokestage.png?raw=true "configureinvokestage")
 
 2.	Delete the build stage create earlier.
