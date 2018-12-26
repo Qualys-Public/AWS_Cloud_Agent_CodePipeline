@@ -35,7 +35,9 @@ we start by creating a Pipeline which will get triggered by any changes in maste
 
 1.	Create Pipeline named “Configuration_management” with all default parameters. Select Github as source and select master branch of  this forked repo.
 
+
 ![createpipeline](createpipeline.png?raw=true "createpipeline")
+
 
 ![createpipeline2](createpipeline2.png?raw=true "createpipeline2")
 
@@ -47,18 +49,25 @@ we start by creating a Pipeline which will get triggered by any changes in maste
 
 2. Create two lambda functions running on 2.7 named as conf_main and conf_helper and replace them with the contents of the "Conf_main.py" and "Conf_helper.py" from the repo.
 
+
 ![createlambdas](createlambdas.png?raw=true "createlambdas")
+
 
 # Modify Pipeline:
 
 1.	View the Pipeline and edit it and add one stage after source named as “Invoke-stage”. Click on Add Action Group and give the Action name as “Lambda” and Action Provider as “AWS Lambda”. Select your Lambda Function and Input Artifacts as “SourceArtifacts”.
 
+
 ![addstage](addstage.png?raw=true "addstage")
+
 
 ![configureinvokestage](configureinvokestage.png?raw=true "configureinvokestage")
 
+
 2.	Delete the build stage create earlier.
 
+
 ![deletebuildstage](deletebuildstage.png?raw=true "deletebuildstage")
+
 
 3.	Add your own ansible playbook to the repo “Configuration Management” under folder ansible. The demo playbook here is named as "InstallQCA.yml".
