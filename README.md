@@ -1,4 +1,5 @@
-# deploy_qualys_CD_Pipeline_AWS
+# deploy_qualys_CD_Pipeline_AWS 
+(Based on GARLC https://github.com/awslabs/lambda-runcommand-configuration-management)
 # Installing QCA on Existing AWS Instances using Continuous Configuration management (DevOps) 
 
 Infrastructure as code has helped customers move into continuous deployment phase and can leverage the same concept to introduce continuous configuration management in their environment. In this mode, configuration management of instances is done automatically, using the above technologies, as configurations are committed to version control.
