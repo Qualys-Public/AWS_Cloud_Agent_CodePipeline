@@ -1,29 +1,25 @@
 # deploy_qualys_CD_Pipeline_AWS 
 (Based on GARLC https://github.com/awslabs/lambda-runcommand-configuration-management)
 
-# License
+## License
 _**THIS SCRIPT IS PROVIDED TO YOU "AS IS."  TO THE EXTENT PERMITTED BY LAW, QUALYS HEREBY DISCLAIMS ALL WARRANTIES AND LIABILITY FOR THE PROVISION OR USE OF THIS SCRIPT.  IN NO EVENT SHALL THESE SCRIPTS BE DEEMED TO BE CLOUD SERVICES AS PROVIDED BY QUALYS**_
 
-# Installing QCA on Existing AWS Instances using Continuous Configuration management (DevOps) 
+## Description 
+
+#### Installing QCA on Existing AWS Instances using Continuous Configuration management (DevOps)#### 
 
 Infrastructure as code has helped customers move into continuous deployment phase and can leverage the same concept to introduce continuous configuration management in their environment. In this mode, configuration management of instances is done automatically, using the above technologies, as configurations are committed to version control.
 We can consider a scenario where infrastructure as code is stored in git repository as ansible playbook and when any changes/ addition are made like introduction of playbook for installation of QCA and committed to master branch, it gets deployed to all ssm managed instance. SSM managed instances are considered owing to the fact that ssh could not be enabled for all instances for management by ansible.
 
 This tutorial makes use of following services:
 
-1.	AWS CodePipeline
-
-2.	AWS Lambda
-
-3.	Amazon EC2 Run Command
-
-4.	CloudWatch Events
-
-5.	S3 Bucket
-
-6.	Ansible
-
-7.	Git
+* AWS CodePipeline
+* AWS Lambda
+* Amazon EC2 Run Command
+* CloudWatch Events
+* S3 Bucket
+* Ansible
+* Git
 
 # Logic: 
 
